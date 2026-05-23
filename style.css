@@ -7,52 +7,80 @@
 body {
     background: black;
     font-family: "Press Start 2P", system-ui;
-    line-height: 1.3;
+    line-height: 1.5;
     text-align: center;
     display: flex;
     flex-direction:column;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
-header, main {
-    flex: 1;
-    padding: 100px;
+header{
+    padding: 40px 20px;
 }
 
 header h1 {
     color: rgb(190, 23, 23);
     font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 header p {
     color: white;
+    font-size: 0.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 section {
     border-style: solid;
     border-color: red;
     border-radius: 20px;
-    display: inline-block;
     padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
 section h1 {
     color: rgb(190, 23, 23);
-    font-size: 2rem;
-    padding: 20px;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
 }
 
 .eternalhtml {
     width: 100%;
+    height: auto;
     max-width: 300px;
     border-radius: 10px;
     border-style: solid;
     border-color: rgb(0, 68, 255);
+    margin-bottom: 20px;
 }
 
 .drive {
-    width: 100%;
-    max-width: 50px;
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+.drive:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        font-size: 1.2rem;
+    }
 }
